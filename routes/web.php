@@ -19,6 +19,16 @@ Route::post('/login', 'UsersController@loginProcess')->name('login.submit');
 Route::get('/register', 'UsersController@register')->name('register');
 Route::post('/register', 'UsersController@registerProcess')->name('register.submit');
 
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return response()->json('cache-clear');
+});
+
+Route::get('/config-cache', function() {
+    Artisan::call('config:cache');
+    return response()->json('config-clear');
+});
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function(){
   Route::group(['prefix' => 'kategori'], function(){
     Route::get('/', 'KategoriController@index')->name('admin.kategori');

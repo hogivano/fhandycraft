@@ -12,6 +12,34 @@
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/gaia.css') }}" rel="stylesheet"/>
 
+    <meta name="title" content="Fahmi Handycraft - Four Your Fashion Needs">
+    <meta name="description" content="Fahmi Handycraft produk handmade (karya tangan) dengan bahan yang berkualitas dan dapat digunakan berbagai macam model outfit">
+    <meta name="keywords" content="handmade, karya tangan, handycraft, produk lokal, pernak-pernik">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Fahmi Handycraft">
+    <meta itemprop="image" content="{{ asset('img/logo.png') }}">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_ image">
+    <meta name="twitter:site" content="@fhandycraft">
+    <meta name="twitter:title" content="Fahmi Handycraft - Four Your Fashion Needs">
+    <meta name="twitter:description" content="Fahmi Handycraft produk handmade (karya tangan) dengan bahan yang berkualitas dan dapat digunakan berbagai macam model outfit">
+    <meta name="twitter:creator" content="@fhandycraft">
+
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="{{ asset('img/logo.png') }}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Fahmi Handycraft - Four Your Fashion Needs" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:image" content="{{ asset('img/logo.png') }}" />
+    <meta property="og:description" content="Fahmi Handycraft produk handmade (karya tangan) dengan bahan yang berkualitas dan dapat digunakan berbagai macam model outfit" />
+    <meta property="og:site_name" content="Fahmi Handycraft" />
+    <meta property="article:section" content="Article Section" />
+    <meta property="article:tag"
+    content="Article Tag" />
     <!--     Fonts and icons     -->
     <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
@@ -126,7 +154,7 @@
                                       <!-- <p class="small-text">CEO / Co-Founder</p> -->
                                       <p class="description" style="margin-bottom: 20px !important; ">{{ $j->description }}</p>
                                       <span class="" style="font-size: 12px;color: white; text-align: left; background-color: #f56856; padding: 5px 10px; border-radius: 20px;">
-                                        Rp. {{ ' ' . $j->low_price }}@if($j->end_price) {{ ' - ' . $j->end_price }} @endif
+                                        Rp. {{ ' ' . number_format($j->low_price) }}@if($j->end_price) {{ ' - ' . number_format($j->end_price) }} @endif
                                       </span>
                                   </div>
                                   <div class="flex-container">
@@ -164,7 +192,7 @@
                                         <!-- <p class="small-text">CEO / Co-Founder</p> -->
                                         <p class="description" style="margin-bottom: 20px !important; ">{{ $j->description }}</p>
                                         <span class="" style="font-size: 12px;color: white; text-align: left; background-color: #f56856; padding: 5px 10px; border-radius: 20px;">
-                                          Rp. {{ ' ' . $j->low_price }}@if($j->end_price) {{ ' - ' . $j->end_price }} @endif
+                                          Rp. {{ ' ' . number_format($j->low_price) }}@if($j->end_price) {{ ' - ' . number_format($j->end_price) }} @endif
                                         </span>
                                     </div>
                                     <div class="flex-container">

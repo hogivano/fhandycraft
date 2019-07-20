@@ -33,8 +33,8 @@ CREATE TABLE `image_katalog` (
   `thumbnail_m` text NOT NULL,
   `price` text,
   `color` text,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` timestamp,
+  `updated_at` timestamp
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -55,8 +55,8 @@ CREATE TABLE `katalog` (
   `low_price` text NOT NULL,
   `end_price` text,
   `color` text,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` timestamp,
+  `updated_at` timestamp
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,8 +82,8 @@ CREATE TABLE `users` (
   `email` text NOT NULL,
   `password` text NOT NULL,
   `remember_token` text,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` timestamp,
+  `updated_at` timestamp
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
