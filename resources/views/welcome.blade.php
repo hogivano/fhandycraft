@@ -111,7 +111,7 @@
                     @endif
                     @foreach($all as $j)
                     <div class="col-md-4 col-sm-12" style="margin-bottom: 20px">
-                        <a href="#">
+                        <a href="{{ url('/') . '/' . $j->image }}" target="_blank">
                           <div class="card card-member">
                               <div class="content">
                                 @if($j->color)
@@ -151,7 +151,7 @@
                       @endif
                       @foreach($i->Katalog as $j)
                       <div class="col-md-4 col-sm-12" style="margin-bottom: 20px">
-                          <a href="#">
+                          <a href="{{ url('/') . '/' . $j->image }}" target="_blank">
                             <div class="card card-member">
                                 <div class="content">
                                   <div class="" style="width: 20px; height: 20px; background-color: {{ $j->color }}; border-radius: 50%;">
